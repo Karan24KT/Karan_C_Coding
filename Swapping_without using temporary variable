@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(){
+
+int a=10,b=20;
+
+printf("Values before swapping are : %d %d \n",a,b);
+
+a = a+b; // a becomes 30
+b = a-b; // b becomes 10
+a = a-b; // a becomes 20
+
+printf("Values after swapping are : %d %d",a,b);
+
+    return 0;
+}
+
+
+//output
+//Values before swapping are : 10 20 
+//Values after swapping are : 20 10
