@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main(){
+
+FILE *fp;
+
+fp =fopen("fresh.txt","w");
+
+fprintf(fp,"My Captain");
+    
+fclose(fp);
+
+fp= fopen("fresh1.txt","w");
+
+fprintf(fp,"niataC yM");
+fclose(fp);
+return 0;
+
+}
+
+//output
+/*
+My Captain // It is in the frest.txt file.
+niataC yM // It is in the fresh1.txt file.
+
+*/
