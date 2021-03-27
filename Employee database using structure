@@ -1,0 +1,97 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+
+//Declaration of structure org
+struct org
+{
+char name[30];
+int age;
+int salary;
+int phone_no;
+};
+int main()
+{
+
+//declaration of org member as array
+struct org employee[20];
+int n,i;
+
+printf("\nEnter the number of employeed in your organization(<=20):");
+scanf("%d",&n);
+
+//enter values using for loop
+for(i=0;i<n;i++)
+{
+printf("\nEnter Person %d\n Name :",i+1);
+scanf("%s",&employee[i].name);
+printf("\n Employee age :");
+scanf("%d",&employee[i].age);
+printf("\n Employee phone number :");
+scanf("%d",&employee[i].phone_no);
+printf("\nEmployee Salary :");
+scanf("%d",&employee[i].salary);
+}
+
+//printing employee information
+printf("\nEmployees Information\n");
+for(i=0;i<n;i++)
+{
+printf("\nPerson %d\n Name : %s",i+1,employee[i].name);
+printf("\nEmployee age : %d",employee[i].age);
+printf("\nEmployee phone_no : %d",employee[i].phone_no);
+printf("\nEmployee Salary : %d",employee[i].salary);
+}
+return 0;
+}
+
+
+//output
+/*
+Enter the number of employeed in your organization(<=20):3
+
+Enter Person 1
+ Name :Chirag
+
+ Employee age :24
+
+ Employee phone number :1234567788 
+
+Employee Salary : 20000
+
+Enter Person 2
+ Name :Arnav
+
+ Employee age :31
+
+ Employee phone number :1234567891
+
+Employee Salary :56000
+
+Enter Person 3
+ Name :Shivam
+
+ Employee age :45
+
+ Employee phone number :8881101111
+
+Employee Salary :30500
+
+Employees Information
+
+Person 1
+ Name : Chirag
+Employee age : 24
+Employee phone_no : 1234567788
+Employee Salary : 20000
+Person 2
+ Name : Arnav
+Employee age : 31
+Employee phone_no : 1234567891
+Employee Salary : 56000
+Person 3
+ Name : Shivam
+Employee age : 45
+Employee phone_no : 291166519
+Employee Salary : 30500
+*/
