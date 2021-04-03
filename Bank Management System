@@ -1,0 +1,115 @@
+  
+#include<stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+int TotalAmount=1000 , Amount=0 , Amo=0 , Tr=0,TotalDeposit=0 ;
+int TotalTr=0,TotalWithdraw=0;
+
+int menu();
+void diposite();
+void withdraw();
+void transfer();
+void checkDetail();
+void last();
+void main(){
+    
+   
+while(1){
+{
+    
+    switch(menu())
+    {
+        case 1: 
+            diposite();
+             TotalDeposit+=Amount;
+        break;
+        case 2: withdraw();
+              if(Amo<=TotalAmount)
+              TotalWithdraw += Amo ;
+              break;
+        case 3:
+              transfer();
+              if(Tr<= TotalAmount)
+              TotalTr += Tr;
+        case 4:
+             checkDetail();
+        break;
+        case 5: 
+        
+        exit(0);
+        default :
+        printf("\n Invalid Choice :");
+    }
+ 
+}
+}
+}
+int menu()
+{
+int ch;
+printf("\n1. Diposite Amount :");
+printf("\n2. Witdraw Amount :");
+printf("\n3. Transfer Amount :");
+printf("\n4. Check Details :");
+printf("\n5. Exit :");
+printf("\n Enter Your Choice :");
+scanf("%d",&ch);
+return ch;
+}
+
+void diposite()
+{
+
+    printf("\n Enter the Amount you want to deposite :");
+    scanf("d",&Amount);
+    TotalAmount += Amount;
+    printf("%d",TotalAmount);
+
+}
+void withdraw()
+{
+    printf("\n Enter The Amount You Want To Withdraw :");
+    if(TotalAmount>=Amo){
+        TotalAmount-=Amo;
+    }
+    else{
+        printf("\n Low Amount , Withdraw Not Possible");
+    }
+}
+void transfer()
+{
+ printf("\n Enter The Amount You Want To Transfer :");
+    if(TotalAmount>=Tr){
+        TotalAmount-=Tr;
+    }
+    else{
+        printf("\n Low Amount , Transfer Not Possible");
+    }
+ 
+}
+
+void checkDetail()
+{
+    printf("\n Your TotalAmount is : %d ",TotalAmount);
+    printf("\n Total Diposited Amount : %d" , TotalDeposit);
+    printf("\n Total Withdrawn  Amount : %d" , TotalWithdraw);
+    printf("\n Total Tranfered Amount : %d" , TotalTr);
+}
+void Last()
+{
+    printf("\n **********************\n");
+    
+    printf("\n Your TotalAmount is : %d ",TotalAmount);
+    printf("\n Total Diposited Amount : %d" , TotalDeposit);
+    printf("\n Total Withdrawn  Amount : %d" , TotalWithdraw);
+    printf("\n Total Tranfered Amount : %d" , TotalTr);
+    printf("\n *****THANKS*****");
+}
+void last()
+{
+
+    printf("\n Your TotalAmount is : %d ",TotalAmount);
+    printf("\n Total Diposited Amount : %d" , TotalDeposit);
+    printf("\n Total Withdrawn  Amount : %d" , TotalWithdraw);
+    printf("\n Total Tranfered Amount : %d" , TotalTr);
+}
